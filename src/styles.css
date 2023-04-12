@@ -1,0 +1,20 @@
+body {
+    background: lightgrey;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.empty {
+    background-color: white;
+}
+
+.tree {
+    background-image: url("https://cdn.pixabay.com/photo/2015/08/13/00/30/tree-886793_960_720.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
