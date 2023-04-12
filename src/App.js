@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
+import "./service/REST";
+import {REST} from "./service/REST";
 
 export default function App() {
     const [grid, setGrid] = useState(Array.from({ length: 5 }, () => Array.from({ length: 5 }, () => "empty")));
@@ -9,12 +11,10 @@ export default function App() {
         // toggle the cell between "empty" and "tree" roles
         newGrid[row][col] = newGrid[row][col] === "empty" ? "tree" : "empty";
         setGrid(newGrid);
+
+        REST(JSON.stringify({ row, col, role: newGrid[row][col] }));
         // send a POST request to the backend to update the role of the cell
-        fetch("http://localhost:8000/update-cell", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ row, col, role: newGrid[row][col] })
-        });
+
     };
 
     return (
