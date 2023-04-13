@@ -4,7 +4,7 @@ import "./service/REST";
 import {REST} from "./service/REST";
 
 export default function App() {
-    const [grid, setGrid] = useState(Array.from({ length: 5 }, () => Array.from({ length: 5 }, () => "empty")));
+    const [grid, setGrid] = useState(Array.from({ length: 15 }, () => Array.from({ length: 30 }, () => "empty")));
 
     const handleCellClick = (row, col) => {
         const newGrid = [...grid];
