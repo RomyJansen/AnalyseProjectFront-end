@@ -12,7 +12,7 @@ export default function App() {
         newGrid[row][col] = newGrid[row][col] === "empty" ? "tree" : "empty";
         setGrid(newGrid);
 
-        REST(JSON.stringify({ row, col, role: newGrid[row][col] }));
+        console.log(REST(JSON.stringify({ row, col, role: newGrid[row][col] })));
         // send a POST request to the backend to update the role of the cell
 
     };
