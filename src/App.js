@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.css";
-import "./service/REST";
-import {REST} from "./service/REST";
+import "./data/REST";
+import {REST} from "./data/REST";
 
 export default function App() {
     const [grid, setGrid] = useState(Array.from({ length: 15 }, () => Array.from({ length: 30 }, () => "empty")));
