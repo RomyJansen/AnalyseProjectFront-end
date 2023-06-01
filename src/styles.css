@@ -3,10 +3,21 @@ body {
 }
 
 td {
-    width: 50px;
-    height: 50px;
-    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+    /*border: 1px solid black;*/
     cursor: pointer;
+    margin: 0;
+    padding: 0;
+
+}
+
+td:hover {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
 }
 
 .empty {
