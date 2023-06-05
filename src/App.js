@@ -1,15 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useState } from "react";
 import "./styles.css";
-import "./data/REST";
-import {REST} from "./data/REST";
+// import {REST} from "./service/REST";
 import {Kaart} from "./kaart/kaart";
 
 export default function App() {
-    // const [grid, setGrid] = useState(Array.from({ length: 15 }, () => Array.from({ length: 30 }, () => "empty")));
-    //
-    // useEffect(() => {
-    //     console.log("lolz");
-    // }, [grid])
+    // const [grid, setGrid] = useState(Array.from({ length: 5 }, () => Array.from({ length: 5 }, () => "empty")));
     //
     // const handleCellClick = (row, col) => {
     //     const newGrid = [...grid];
@@ -17,18 +12,12 @@ export default function App() {
     //     newGrid[row][col] = newGrid[row][col] === "empty" ? "tree" : "empty";
     //     setGrid(newGrid);
     //
-    //     console.log(REST(JSON.stringify({ row, col, role: newGrid[row][col] })));
+    //     REST(JSON.stringify({ row, col, role: newGrid[row][col] }));
     //     // send a POST request to the backend to update the role of the cell
     //
     // };
 
     return (
-        <div>
-            <Kaart />
-        </div>
-
-
-
         // <div className="App">
         //     <table>
         //         <tbody>
@@ -47,5 +36,6 @@ export default function App() {
         //         </tbody>
         //     </table>
         // </div>
+        <Kaart />
     );
 }
