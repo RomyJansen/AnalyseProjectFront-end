@@ -18,3 +18,13 @@ td {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+line {
+    stroke: red;
+    stroke-width: 5px;
+}
+
+.items {
+    height: 1080px;
+    width: 1920px;
+}
