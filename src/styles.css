@@ -1,5 +1,7 @@
 body {
     background: lightgrey;
+    overflow: hidden;
+    position: absolute;
 }
 
 td {
@@ -27,4 +29,23 @@ line {
 .items {
     height: 1080px;
     width: 1920px;
+}
+
+svg rect {
+    background: transparent;
+    color: red;
+    fill: transparent;
+    stroke: darkmagenta;
+    pointer-events: all;
+    /*transform: rotate(45deg);*/
+
+}
+
+svg rect:hover {
+    fill: aqua;
+    background: chartreuse;
+}
+
+svg line:hover {
+    stroke: deeppink;
 }
