@@ -44,7 +44,8 @@ export function Kaart(){
             y: y1,
             width: x2 - x1,
             height: y2 - y1,
-            style: {transform: "rotate("+ lineAngle + "deg)"}
+            angle: lineAngle,
+            selected: false
         };
 
         tempGrid.push(gridContour);
@@ -56,7 +57,8 @@ export function Kaart(){
                     y: j,
                     width: 30,
                     height: 30,
-                    style: {fill: i > 1000 ? "yellow" : "transparent", transform: "rotate("+ lineAngle + "deg)"}
+                    angle: lineAngle,
+                    selected: false
                 }
                 console.log("cel values: x= " + newCell.x + " , y= " + newCell.y + " , Width= " + newCell.width + " , height= " + newCell.height);
                 tempGrid.push(newCell);
@@ -94,8 +96,8 @@ export function Kaart(){
                         y={cell.y}
                         width={cell.width}
                         height={cell.height}
-                        style={cell.style}
-                        />
+                        style={{fill: cell.selected ? "yellow" : "transparent", transform: "rotate("+ cell.angle + "deg)"}}
+                        onClick={() => (cell.selected = true)}/>
                 ))}
 
                 {lines && lines.map((line, index) => (
