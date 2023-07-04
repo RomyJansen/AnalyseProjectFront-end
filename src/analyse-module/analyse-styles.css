@@ -1,0 +1,71 @@
+body{
+    background: lightgrey;
+    overflow: hidden;
+    background: rgb(75,96,201);
+    background: radial-gradient(circle, rgba(75,96,201,1) 0%, rgba(92,166,25,1) 100%);
+}
+
+/*.vensterNav {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: space-evenly;*/
+/*    padding: 5px;*/
+/*    background-color: teal;*/
+/*    color: #fff;*/
+/*}*/
+
+.navBar {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    /*gap: 1em;*/
+    font-size: 18px;
+    width: 100%;
+    border-right: 2px white;
+}
+
+.navBar li {
+    /*float: left;*/
+    display: block;
+    list-style: none;
+    width: 25%;
+    background-color: dimgrey;
+    /*border-right: 2px white;*/
+    border: #111111 2px;
+
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 2px white;
+
+}
+
+/*.navItem {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*    border-right: 2px white;*/
+
+/*}*/
+
+/* Change the link color to #111 (black) on hover */
+.navBar li:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: chartreuse;
+}
+
+.venster {
+    display: flex;
+    align-content: center;
+    width: 25%;
+    border-right: red 2px;
+    background-color: white;
+}
+
+

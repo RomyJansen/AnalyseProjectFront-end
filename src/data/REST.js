@@ -15,3 +15,12 @@ export async function REST(json) {
     const data = await response.json();
     console.log(data);
 }
+
+export async function getAllData(id){
+    const response = await fetch("http://localhost:8000/bv/" + id, {
+        method: "GET"
+    })
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
