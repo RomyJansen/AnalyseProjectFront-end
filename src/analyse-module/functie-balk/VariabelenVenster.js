@@ -1,4 +1,10 @@
+import {useState} from "react";
+
 export function VariabelenVenster(){
+
+    const [variabelen, setVariabelen] = useState();
+
+
 
     class Variabele{
         id;
@@ -23,6 +29,7 @@ export function VariabelenVenster(){
             {mockVars && mockVars.map((vars,index) => (
                 <p>{vars.name} - {vars.value}</p>
             ))}
+            <p>{variabelen}</p>
         </div>
     )
 }

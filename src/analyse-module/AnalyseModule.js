@@ -1,10 +1,11 @@
-import {VariabelenVenster} from "./functie-balk/VariabelenVenster";
+import {setVars, VariabelenVenster} from "./functie-balk/VariabelenVenster";
 import {RegelsVenster} from "./functie-balk/RegelsVenster";
 import {GebeurtenissenVenster} from "./functie-balk/GebeurtenissenVenster";
 import {ResultatenVenster} from "./functie-balk/ResultatenVenster";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import "./analyse-styles.css";
-import {getAllData, REST} from "../data/REST";
+import {getAllData, getBerekendeVar, REST} from "../data/REST";
+
 
 export function AnalyseModule() {
     const [variabelenVisible, setVariabelenVisible] = useState(false);
@@ -12,6 +13,7 @@ export function AnalyseModule() {
     const [gebeurtenissenVisible, setGebeurtenissenVisible] = useState(false);
     const [resultatenVisible, setResultatenVisible] = useState(false);
     const [berekendeVar, setBerekendeVar] = useState(0);
+    const [scenario, setscenario] = useState(0);
 
 
     function toggleVensterVisible(vensterName) {
@@ -92,7 +94,7 @@ export function AnalyseModule() {
             </div>
             <form >
                 <label htmlFor="cars">Kies een bv</label>
-                <select name="bv" id="bv" onChange={(event) => setBerekendeVar(getAllData(event.target.value))}>
+                <select name="bv" id="bv" onChange={(event) => setBerekendeVar(getBerekendeVar(event.target.value))}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -101,6 +103,8 @@ export function AnalyseModule() {
                 </select>
             </form>
             <p>{JSON.stringify(berekendeVar)}</p>
+
+            <button onClick={() => setscenario(getAllData())}>scenario</button>
         </div>
     )
 }

@@ -16,8 +16,17 @@ export async function REST(json) {
     console.log(data);
 }
 
-export async function getAllData(id){
+export async function getBerekendeVar(id){
     const response = await fetch("http://localhost:8000/bv/" + id, {
+        method: "GET"
+    })
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
+
+export async function getAllData(){
+    const response = await fetch("http://localhost:8000/scenario", {
         method: "GET"
     })
     const data = await response.json();
