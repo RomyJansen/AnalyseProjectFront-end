@@ -15,7 +15,6 @@ export function AnalyseModule() {
     const [berekendeVar, setBerekendeVar] = useState(0);
     const [scenario, setscenario] = useState(0);
 
-
     function toggleVensterVisible(vensterName) {
         switch (vensterName) {
             case "variabelen":
@@ -52,6 +51,10 @@ export function AnalyseModule() {
                 setGebeurtenissenVisible(false);
                 setResultatenVisible(false);
         }
+    }
+
+    function getGebeurtenissen(){
+        return scenario
     }
 
     function checkIfActive(type){
