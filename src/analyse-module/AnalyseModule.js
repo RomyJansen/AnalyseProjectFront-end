@@ -13,7 +13,9 @@ export function AnalyseModule() {
     const [gebeurtenissenVisible, setGebeurtenissenVisible] = useState(false);
     const [resultatenVisible, setResultatenVisible] = useState(false);
     const [berekendeVar, setBerekendeVar] = useState(0);
-    const [scenario, setscenario] = useState(0);
+    const [scenario, setScenario] = useState(0);
+
+
 
     function toggleVensterVisible(vensterName) {
         switch (vensterName) {
@@ -62,6 +64,10 @@ export function AnalyseModule() {
         return "active";
     }
 
+    async function getData() {
+        setScenario(await getAllData())
+    }
+
     return (
         <div id={"analyse-module"}>
             <div className={"vensterNav"}>
@@ -106,8 +112,9 @@ export function AnalyseModule() {
                 </select>
             </form>
             <p>{JSON.stringify(berekendeVar)}</p>
-
-            <button onClick={() => setscenario(getAllData())}>scenario</button>
+            <p>{JSON.stringify(scenario)}</p>
+            <button onClick={() => getData()}>scenario</button>
+            {/*<button onClick={() => this.setState({ scenario: "test" })}>scenario</button>*/}
         </div>
     )
 }
