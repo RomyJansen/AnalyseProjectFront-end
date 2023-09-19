@@ -81,3 +81,27 @@ export async function getAllRegels(){
     console.log(data);
     return data;
 }
+
+export async function getAllObjects(){
+    const response = await fetch("http://localhost:8000/variabelen/objecten/jaar?jaar=" + getJaar().toString(), {
+        method: "GET"
+    })
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
+
+export async function addObjectGebeurtenis(gebeurtenis) {
+    const response = await fetch("http://localhost:8000/gebeurtenis/object/toevoegen", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json", // Set the content type to JSON
+        },
+        body: JSON.stringify(gebeurtenis), // Convert the object to a JSON string
+    });
+
+    const data = await response.json();
+    console.log(data);
+    return data;
+}
+

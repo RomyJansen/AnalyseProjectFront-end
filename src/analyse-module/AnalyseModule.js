@@ -4,8 +4,9 @@ import {GebeurtenissenVenster} from "./functie-balk/GebeurtenissenVenster";
 import {ResultatenVenster} from "./functie-balk/ResultatenVenster";
 import {useEffect, useMemo, useRef, useState} from "react";
 import "./analyse-styles.css";
-import {getAllData, getBerekendeVar, REST} from "../data/REST";
+import {addObjectGebeurtenis, getAllData, getBerekendeVar, REST} from "../data/REST";
 import {decreaseJaar, getJaar, incrementJaar} from "./state";
+import Kaart from "./kaart/Kaart";
 
 
 export function AnalyseModule() {
@@ -118,6 +119,9 @@ export function AnalyseModule() {
                         )}
                     </div>
                 ) }
+                <div style={{display: "flex", overflow: "hidden"}}>
+                    <Kaart/>
+                </div>
 
             {/*<div id={"lolz"} style={{display: "flex", overflow: "hidden"}}>*/}
             {/*<form >*/}
