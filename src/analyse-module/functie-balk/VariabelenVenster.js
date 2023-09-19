@@ -86,14 +86,12 @@ export function VariabelenVenster(){
             <table border="1" width="100%">
                 <tbody>
                 <p style={{fontWeight: "bold"}}>Berekend</p>
-                {/*{(berekendeVariabelen !== "loading...") && berekendeVariabelen.map((vars, index) => (*/}
-                {/*    <tr>*/}
-                {/*        <p>{vars.id} - {vars.naam}<br/>*/}
-                {/*            <p style={{fontStyle: "italic"}}>afstand van object {vars.objectLink} tot dichtsbijzijnde {determineObjectType(vars)}</p>*/}
-                {/*            <p style={{fontWeight: "bold",fontStyle: "italic"}}>waarde: {determineLowestValue(vars.results)}</p>*/}
-                {/*        </p>*/}
-                {/*    </tr>*/}
-                {/*))}*/}
+                {(berekendeVariabelen !== "loading...") && berekendeVariabelen.map((vars, index) => (
+                    <tr>
+                        <p>{vars.id} - {vars.naam}<br/>
+                        </p>
+                    </tr>
+                ))}
                 {(berekendeVariabelen == "loading...") && berekendeVariabelen}
                 </tbody>
             </table>
